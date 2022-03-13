@@ -71,20 +71,7 @@
         transform: translateY(-150px);
         width: 90%;
       }
-      
-      #animals {
-        display: flex;
-        justify-content: center;
-      }
 
-      #animals > div {
-        margin: 30px;
-        display: flex;
-        flex-direction: column;
-        align-items: left;
-        justify-content: left;
-      }
-      
       iframe {
         height: 100em;
         width: 60em;
@@ -102,6 +89,21 @@
       .seven, .eight, .nine, .ten, .eleven {
         background-image: url("https://th.bing.com/th/id/R.34cbe5d07b02ff2f3e9243de1c4857cd?rik=AbchQ3%2fWb%2fw5Hw&riu=http%3a%2f%2fwww.parks.vic.gov.au%2f-%2fmedia%2fproject%2fpv%2fmain%2fparks%2fimages%2fflora-and-fauna%2fgrasslands-1920x1124.jpg&ehk=a%2fgfzmS3fRfqEIkCCi2W3UT65bCeX9r4dLtULHGTI%2fI%3d&risl=&pid=ImgRaw&r=0");
       }
+
+      #five > ul {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        column-gap: 80px;
+      }
+
+      #five > ul > div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+
 
     </style>
   </head>
@@ -123,7 +125,7 @@
           <ul>
             <li style="font-size: xx-large; transform: translateY(-30px);">Grassland is a large open space which has high amount of grass.</li>
             <li style="font-size: xx-large; transform: translateY(-30px);">The grassland is found in every continent in the world except antartica</li>  
-            <li style="font-size: xx-large; transform: translateY(-30px);;">Grasslands are majorly covered with grass but accasionaly we can find trees. It is the primary shelter and shade for carnivors</li>
+            <li style="font-size: xx-large; transform: translateY(-30px);">Grasslands are majorly covered with grass but accasionaly we can find trees. It is the primary shelter and shade for carnivors</li>
           </ul>
         </p>
         </div>
@@ -153,24 +155,24 @@
         </div>
 
 
-        <div class="swiper-slide five">
+        <div class="swiper-slide five" id="five">
           <h1 style="transform: translateY(-100px);">What Are The Animals Present in the grassland</h1>
-          <ul id="animals">
+          <ul>
             <div>
-            <li style="font-size: x-large; transform: translateY(30px);">Heyna</li>
-            <li style="font-size: x-large; transform: translateY(30px);">Wolf</li>
-            <li style="font-size: x-large; transform: translateY(30px);">Pronghorn</li>
-            <li style="font-size: x-large; transform: translateY(30px);">Kangroo</li>
-            <li style="font-size: x-large; transform: translateY(30px);">Zebra</li>
-            <li style="font-size: x-large; transform: translateY(30px);">Cheeta</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Heyna</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Wolf</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Pronghorn</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Kangroo</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Zebra</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Cheeta</li>
             </div>
             <div>
-            <li style="font-size: x-large; transform: translateY(30px);">Skunk</li>
-            <li style="font-size: x-large; transform: translateY(30px);">Bluebird</li>
-            <li style="font-size: x-large; transform: translateY(30px);">Monkey</li>
-            <li style="font-size: x-large; transform: translateY(30px);">Newt</li>
-            <li style="font-size: x-large; transform: translateY(30px);">Beetle</li>
-            <li style="font-size: x-large; transform: translateY(30px);">Lion</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Skunk</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Bluebird</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Monkey</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Newt</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Beetle</li>
+              <li style="font-size: x-large; transform: translateY(30px);">Lion</li>
             </div>
           </ul>
         </div>
@@ -198,7 +200,9 @@
         <div class="swiper-slide eleven" style="color: white; font-size: 80px;"><h1 style = "transform: translateY(50px);">Thank You</h1></div>
 
       </div>
-      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next" style="color: white;"></div>
+      <div class="swiper-button-prev" style="color: white;"></div>
+
     </div>
 
     <!-- Swiper JS -->
@@ -207,10 +211,9 @@
     <!-- Initialize Swiper -->
     <script>
       var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 60,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
         },
       });
     </script>
